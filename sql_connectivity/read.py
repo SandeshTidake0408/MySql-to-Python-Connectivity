@@ -5,8 +5,8 @@ con = c.connect(host="localhost", user="root",
 cursor = con.cursor()
 cursor.execute("select *from emp")
 # data = cursor.fetchone()
-data = cursor.fetchmany(2)
-# data = cursor.fetchall()
+# data = cursor.fetchmany(2)
+data = cursor.fetchall()
 # print(data)
 for i in data:
     print(i)

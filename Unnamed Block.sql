@@ -6,10 +6,10 @@
 -- Consider Tables: 
 -- 1. Borrower(Roll_no, Name, DateofIssue, NameofBook, Status) 
 -- 2. Fine(Roll_no,Date,Amt)
---  Accept Roll_no and NameofBook from user. 
+--  Accept Roll_no and Name of Book from user. 
 --  Check the number of days (from date of issue).
 --  If days are between 15 to 30 then fine amount will be Rs 5per day.
---  If no. of days>30, per day fine will be Rs 50 per day and for days less than 30, Rs. 5 per day. 
+--  If no. of days>30, per day fine will be Rs 50 per day.
 --  After submitting the book, status will change from I to R.
 --  If condition of fine is true, then details will be stored into fine table.
 --  Also handles the exception by named exception handler or user define exception handler.

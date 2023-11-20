@@ -5,7 +5,7 @@ CREATE OR REPLACE TRIGGER BOOKSTORE
     ENABLE
 BEGIN
     IF UPDATING THEN
-        DBMS_OUTPUT.PUT_LINE(:OLD.STATUS);
+        DBMS_OUTPUT.PUT_LINE(:OLD.STATUS || ' UPDATING');
         INSERT INTO LIBRARY_AUDIT VALUES(
             SYSDATE,
             :OLD.BOOK_NAME,
@@ -14,13 +14,12 @@ BEGIN
             'Update'
         );
     ELSIF INSERTING THEN
-        DBMS_OUTPUT.PUT_LINE(:NEW.BOOK_NAME
-                                  || ' Inserting');
+        DBMS_OUTPUT.PUT_LINE(:NEW.BOOK_NAME || ' Inserting');
         INSERT INTO LIBRARY_AUDIT VALUES(
             SYSDATE,
             :NEW.BOOK_NAME,
             NULL,
-            :NEW.STATUS,
+            :NW.STATUS,E
             'Insert'
         );
     ELSIF DELETING THEN

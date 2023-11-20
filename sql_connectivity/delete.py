@@ -12,5 +12,7 @@ while True:
     else:
         print("No Data Found!!!")
     exit = input("Do you Want to Update Again...(y/n): ")
-    if (exit == "n" or "N"):
+    if (exit == "Y" or "y"):
+        continue
+    else:
         break

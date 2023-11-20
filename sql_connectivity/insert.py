@@ -1,4 +1,3 @@
-import mysql.connector
 import mysql.connector as c
 con = c.connect(host="localhost", user="root",
                 passwd="SDT123@#", database="TECO2324A020")
@@ -15,5 +14,7 @@ while True:
     con.commit()
     print("Inserted Successfuly..")
     exit = input("Do you Want to Insert Again...(y/n): ")
-    if (exit == "n" or "N"):
+    if (exit == "Y" or "y"):
+        continue
+    else:
         break

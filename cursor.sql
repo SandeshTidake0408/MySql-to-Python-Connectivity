@@ -5,7 +5,7 @@ BEGIN
     SET
         STATUS='Present'
     WHERE
-        ROLL_NO=5;
+        ROLL_NO=13;
     IF SQL%FOUND THEN
         DBMS_OUTPUT.PUT_LINE('Updated');
     END IF;
